@@ -9,11 +9,11 @@ $().ready(()=>{
         display(allVendors);
     })
     .fail()
-    console.log(vendors);
+    console.log(allVendors);
 
  $.getJSON(url) 
     .done((vendors)=>{
-        console.log(vendors);
+        console.log(allVendors);
     })
     .fail((err)=>{
         console.error(err);
