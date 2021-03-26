@@ -2,7 +2,7 @@ let singleUser=null;
 
 $().ready(()=>{
 
-    userDetail(4)
+    userDetail(1)
     .done((user)=>{
         singleUser=user;
         display(singleUser);

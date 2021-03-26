@@ -4,6 +4,15 @@ const vendorList=()=>{
    return $.getJSON(url);
 }
 
-const vendorDetali =(id)=>{
-    return $.getJSON(`${url}/${id}}`);
+const vendorDetail =(id)=>{
+    return $.getJSON(`${url}/${id}`);
+}
+
+const vendorCreate =(vendor)=>{
+    return $.ajax({
+        method: "POST",
+        url:url,
+        data: JSON.stringify(vendor),
+        contentType: "application/json"
+    })
 }
