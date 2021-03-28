@@ -16,3 +16,17 @@ const vendorCreate =(vendor)=>{
         contentType: "application/json"
     })
 }
+
+const vendorUPDATE =(id,vendor)=>{
+
+    return $.ajax({
+        method: "UPDATE",
+        url:url,
+        data: JSON.stringify(vendor),
+        contentType: "application/json"
+    })
+}
+
+const vendorDelete =(id)=>{
+    return $.getJSON(`${url}/${id}`);
+}
