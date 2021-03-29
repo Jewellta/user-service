@@ -17,11 +17,11 @@ const vendorCreate =(vendor)=>{
     })
 }
 
-const vendorUPDATE =(id,vendor)=>{
+const vendorUpdate =(vendor, id)=>{
 
     return $.ajax({
-        method: "UPDATE",
-        url:url,
+        method: "PUT",
+        url:`${url}/${id}`,
         data: JSON.stringify(vendor),
         contentType: "application/json"
     })

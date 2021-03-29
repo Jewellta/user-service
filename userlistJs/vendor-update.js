@@ -26,12 +26,12 @@ $().ready(()=>{
             zip:$("#izip").val(),
         }
         console.debug("vendor b4:", vendor);
-        vendorUPDATE(vendor)
-        .done((res)=>{
-            console.log("create successful:",res);
+        vendorUpdate(vendor)
+        .done((resp)=>{
+            console.log("create successful:", resp);
         })
         .fail((err)=>{
-            console.log("failed",res)
+            console.log("failed",resp)
         })
     })
     
