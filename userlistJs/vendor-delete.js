@@ -20,12 +20,17 @@ $().ready(()=>{
 
 })
 
-
-const display =(vendor) =>{
-    console.log("display");
-    $("#pid").val(vendor.id);
-    $("#pcode").val(vendor.code);
-    $("#pname").val(vendor.name);
-    $("#paddress").val(vendor.address);
-    $("#pemail").val(vendor.email?? "na");
-    $("#pphone").val(vendor.phone?? "na");}
+const display =(vendors)=>{
+    let tbody=$("tbody");
+    tbody.empty();
+    for(let vendor of vendors){
+        let tr=$("<tr></tr>");
+        let tdId=$(`<td>${vendor.id}</td>`);
+        tr.append(tdId);
+        tr.append($(`<td>${vendor.id}</td>`))
+        tr.append($(`<td>${vendor.code}</td>`));
+        tr.append($(`<td>${vendor.name}</td>`));
+        tr.append($(`<td>${vendor.address}</td>`));
+        tbody.append(tr);
+       }
+    }
